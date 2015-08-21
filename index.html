@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description">
+  <title>Team Randomizer</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/handlebars-v3.0.3.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <script id="teams-template" type="text/x-handlebars-template">
+  <div class="row">
+  {{#each this}}
+    <div class="col-md-6 well">
+     <h2>{{name}}</h2>
+     <ul>
+     <li>{{group}}</li>
+     </ul>
+
+    </div>
+  {{/each}}
+  </div>
+  </script>
+  <div class="container-fluid">
+    <h1 class="header-">Class Team Generator</h1>
+  </div>
+  <div class="container">
+        <form id="radio">
+          <div class="form-group">
+          <fieldset>
+            <legend>Select Number of Groups:</legend>
+            <input type="radio" name="#ofTeams" value="2"/><label for="2"> 2</label>
+            <input type="radio" name="#ofTeams" value="3"/><label for="3"> 3</label>
+            <input type="radio"  name="#ofTeams" value="4"/><label for="4"> 4</label>
+            <input type="radio"  name="#ofTeams" value="5"/><label for="5"> 5</label>
+            <input type="radio"  name="#ofTeams" value="6"/><label for="6"> 6</label>
+            <input type="radio"  name="#ofTeams" value="7"/><label for="7"> 7</label>
+            <input type="radio"  name="#ofTeams" value="8"/><label for="8"> 8</label>
+            <input type="radio"  name="#ofTeams" value="9"/><label for="9"> 9</label>
+            <input type="radio"  name="#ofTeams" value="10"/><label for="10"> 10</label>
+          </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Generate teams!"/>
+          </fieldset>
+        </form>
+        <div id="content"></div>
+  <script src="js/bootstrap.min.js"></script>
+</div><!--container-->
+</body>
+</html>
